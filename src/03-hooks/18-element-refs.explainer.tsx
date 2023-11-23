@@ -16,7 +16,7 @@ export const undefinedAsRef = (
     ref={{
       // Type 'undefined' is not assignable to
       // type 'HTMLDivElement | null'.
-      current: undefined,
+      current: null,
     }}
   ></div>
 );
@@ -24,7 +24,7 @@ export const undefinedAsRef = (
 // Callback refs are supported via RefCallback<T>
 export const callbackRefs = (
   <div
-    ref={(htmlDivElement) => {
+    ref={htmlDivElement => {
       type test = Expect<Equal<typeof htmlDivElement, HTMLDivElement | null>>;
     }}
   ></div>

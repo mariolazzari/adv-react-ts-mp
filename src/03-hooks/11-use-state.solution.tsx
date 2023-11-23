@@ -9,7 +9,7 @@ export const Tags = () => {
   const [tags, setTags] = useState<Tag[]>([]);
   return (
     <div>
-      {tags.map((tag) => {
+      {tags.map(tag => {
         return <div key={tag.id}>{tag.value}</div>;
       })}
       <button

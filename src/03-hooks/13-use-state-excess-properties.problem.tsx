@@ -12,14 +12,13 @@ export const Tags = () => {
   });
   return (
     <div>
-      {state.tags.map((tag) => {
+      {state.tags.map(tag => {
         return (
           <button
             key={tag.id}
             onClick={() => {
-              setState((currentState) => ({
+              setState((currentState: TagState) => ({
                 ...currentState,
-                // @ts-expect-error
                 tagselected: tag.id,
               }));
             }}
@@ -30,14 +29,13 @@ export const Tags = () => {
       })}
       <button
         onClick={() => {
-          setState((currentState) => ({
+          setState((currentState: TagState) => ({
             ...currentState,
             tags: [
               ...currentState.tags,
               {
                 id: new Date().getTime(),
                 value: "New",
-                // @ts-expect-error
                 otherValue: "something",
               },
             ],
