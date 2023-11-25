@@ -15,13 +15,13 @@ export const Parent = () => {
   return (
     <>
       <Table
-        renderRow={(index) => {
+        renderRow={index => {
           type test = Expect<Equal<typeof index, number>>;
           return <div key={index}>{index}</div>;
         }}
       />
       <Table
-        renderRow={(index) => {
+        renderRow={index => {
           return null;
         }}
       />
@@ -30,7 +30,7 @@ export const Parent = () => {
         renderRow={<div></div>}
       />
       <Table
-        renderRow={(index) => {
+        renderRow={index => {
           return index;
         }}
       />
